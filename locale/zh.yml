@@ -1,0 +1,27 @@
+linkrobins-clipboard:
+  admin:
+    settings:
+      copy_enable_label: "开启复制功能"
+      copy_enable_help:  "启用后，每个代码块上会出现复制按钮。"
+
+      themes_label: "复制按钮风格"
+      themes_help:  "选择复制按钮的视觉样式。"
+      themes:
+        default:      "默认"
+        github:       "GitHub"
+        lingcoder:    "LingCoder"
+        csdn:         "CSDN"
+        cnblog:       "博客园"
+        jianshu:      "简书"
+        segmentfault: "思否"
+
+      codeLang_label: "显示代码语言"
+      codeLang_help:  "在每个代码块的右上角显示检测到的编程语言。"
+
+  forum:
+    action_copy: "复制"
+    action_cut:  "剪切"
+    ok_btn:      "复制成功"
+    error_btn:   "复制失败"
+    no_support:  "不支持"
+    msg:         "按 {actionKey} {action}"
