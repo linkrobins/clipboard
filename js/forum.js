@@ -135,7 +135,7 @@
 
         setInterval(function () {
             document.querySelectorAll('pre code').forEach(function (el) {
-                try { observer.observe(el, { attributes: true, attributeFilter: ['class'] }); } catch (e) {}
+                try { observer.observe(el, { attributes: true, attributeFilter: ['class'] }); } catch (e) { console.error('[linkrobins/clipboard] re-observe failed', e); }
             });
             hoistFromExistingLanguages();
         }, 5000);
@@ -232,4 +232,3 @@
 
 })();
 
-module.exports = {};
