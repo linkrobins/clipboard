@@ -1,3 +1,6 @@
+import app from 'flarum/forum/app';
+import extractText from 'flarum/common/utils/extractText';
+
 import getThemeContent from './themes';
 import { copyText, showFallbackMessage } from './copy';
 
@@ -11,7 +14,7 @@ export default function injectButtons(rootEl: Element, theme: string): void {
     btn.className = `clipboard ${theme}`;
     btn.type = 'button';
     btn.innerHTML = idle;
-    btn.setAttribute('aria-label', 'Copy code');
+    btn.setAttribute('aria-label', extractText(app.translator.trans('linkrobins-clipboard.forum.copy_code_aria')));
 
     if (theme === 'lingcoder' || theme === 'csdn') {
       pre.classList.add('sticky');
