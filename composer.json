@@ -27,6 +27,11 @@
                 "color": "#07adcc",
                 "backgroundColor": "#1a2535"
             }
+        },
+        "flarum-cli": {
+            "modules": {
+                "githubActions": true
+            }
         }
     }
 }

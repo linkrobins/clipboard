@@ -20,11 +20,7 @@ export default function getThemeContent(theme: string): ThemeContent {
       ];
     case 'lingcoder':
     case 'csdn':
-      return [
-        `<span class="label">${copyLabel}</span>`,
-        `<span class="success">${okLabel}</span>`,
-        `<span class="error">${errorLabel}</span>`,
-      ];
+      return [`<span class="label">${copyLabel}</span>`, `<span class="success">${okLabel}</span>`, `<span class="error">${errorLabel}</span>`];
     case 'cnblog':
       return ['<i class="fas fa-code"></i>', '<i class="fas fa-check"></i>', '<i class="fas fa-times"></i>'];
     case 'jianshu':
