@@ -2,6 +2,8 @@
     "name": "linkrobins/clipboard",
     "description": "Adds a copy-to-clipboard button to code blocks, plus an optional language label. Ported to Flarum 2.0 from ffans/clipboardjs.",
     "type": "flarum-extension",
+    "keywords": ["flarum", "clipboard", "copy", "code", "syntax-highlighting"],
+    "homepage": "https://linkrobins.com/extensions/clipboard",
     "license": "MIT",
     "authors": [
         {
