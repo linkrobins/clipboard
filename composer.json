@@ -27,7 +27,7 @@
     },
     "extra": {
         "flarum-extension": {
-            "title": "Link Robins Clipboard",
+            "title": "LR Clipboard",
             "category": "feature",
             "icon": {
                 "name": "far fa-clipboard",
