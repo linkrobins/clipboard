@@ -4,6 +4,20 @@ import extractText from 'flarum/common/utils/extractText';
 import getThemeContent from './themes';
 import { copyText, showFallbackMessage } from './copy';
 
+// flarum/emoji swaps each emoji in the post for an <img alt="...">, which
+// innerText skips, so put the alt text back before reading the code.
+function codeText(el: HTMLElement): string {
+  const clone = el.cloneNode(true) as HTMLElement;
+
+  clone.querySelectorAll('img[alt]').forEach((img) => {
+    const alt = img.getAttribute('alt');
+    if (alt) img.replaceWith(document.createTextNode(alt));
+  });
+  clone.querySelectorAll('br').forEach((br) => br.replaceWith('\n'));
+
+  return clone.textContent || '';
+}
+
 export default function injectButtons(rootEl: Element, theme: string): void {
   const [idle, okHtml, errHtml] = getThemeContent(theme);
 
@@ -25,7 +39,9 @@ export default function injectButtons(rootEl: Element, theme: string): void {
       e.stopPropagation();
 
       const code = pre.querySelector('code');
-      const text = (code ? code.innerText : pre.innerText).replace(/^\s+/, '').replace(/\s+$/, '');
+      const text = codeText(code || pre)
+        .replace(/^\s+/, '')
+        .replace(/\s+$/, '');
 
       copyText(text)
         .then(() => {
