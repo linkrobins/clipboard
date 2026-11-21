@@ -62,3 +62,5 @@ php flarum cache:clear
 ## License
 
 MIT. Credit to [Golden / ffans](https://github.com/ffans) for the original implementation.
+
+<!-- unfinished work: window-close test -->
