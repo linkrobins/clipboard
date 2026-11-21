@@ -64,3 +64,4 @@ php flarum cache:clear
 MIT. Credit to [Golden / ffans](https://github.com/ffans) for the original implementation.
 
 <!-- unfinished work: window-close test -->
+<!-- second unfinished edit: window-close test 2 -->
