@@ -28,7 +28,7 @@ The extension adds no permissions and no database tables.
 
 ## Requirements
 
-- Flarum 2.x
+- Flarum 2.0 or newer
 - PHP 8.3 or newer
 - Optional: the language label reads a `language-X` class on the code block, as added by a syntax highlighter extension (highlight.js, Prism and similar). A code block with no such class gets no label; the copy button works regardless.
 
